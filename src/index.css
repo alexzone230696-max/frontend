@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 25% 7%;
+    --foreground: 210 40% 96%;
+
+    --card: 230 20% 10%;
+    --card-foreground: 210 40% 96%;
+
+    --popover: 230 20% 10%;
+    --popover-foreground: 210 40% 96%;
+
+    --primary: 240 80% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 230 15% 16%;
+    --secondary-foreground: 210 40% 96%;
+
+    --muted: 230 15% 14%;
+    --muted-foreground: 220 15% 55%;
+
+    --accent: 160 70% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 230 15% 18%;
+    --input: 230 15% 18%;
+    --ring: 240 80% 65%;
+
+    --radius: 0.75rem;
+
+    --success: 160 70% 45%;
+    --warning: 38 92% 55%;
+
+    --sidebar-background: 230 20% 8%;
+    --sidebar-foreground: 210 40% 96%;
+    --sidebar-primary: 240 80% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 230 15% 14%;
+    --sidebar-accent-foreground: 210 40% 96%;
+    --sidebar-border: 230 15% 18%;
+    --sidebar-ring: 240 80% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(240 80% 65% / 0.3), 0 0 60px hsl(240 80% 65% / 0.1);
+  }
+  .glow-accent {
+    box-shadow: 0 0 20px hsl(160 70% 45% / 0.3), 0 0 60px hsl(160 70% 45% / 0.1);
+  }
+  .glass {
+    @apply bg-card/60 backdrop-blur-xl border border-border/50;
+  }
+}
