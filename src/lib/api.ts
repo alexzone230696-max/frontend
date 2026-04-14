@@ -1,4 +1,4 @@
-const API_BASE = "https://asas-black.vercel.app";
+const API_BASE = "https://backend-one-rouge-40.vercel.app";
 
 export interface ApiConfig {
   apiKey: string;
